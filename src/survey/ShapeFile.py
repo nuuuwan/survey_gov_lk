@@ -4,10 +4,10 @@ import sys
 import geopandas as gpd
 from utils import JSONFile, Log
 
-log = Log("ShapeUtils")
+log = Log("ShapeFile")
 
 
-class ShapeUtils:
+class ShapeFile:
     def __init__(self, shp_file_path: str):
         if not os.path.isfile(shp_file_path) or not shp_file_path.endswith(
             ".shp"
@@ -76,7 +76,7 @@ class ShapeUtils:
 
 if __name__ == "__main__":
     shp_file_path = sys.argv[1]
-    shape_utils = ShapeUtils(shp_file_path)
+    shape_utils = ShapeFile(shp_file_path)
     # shape_utils.build_geojson(os.path.join("" "data", "GN.geojson"))
     # shape_utils.build_geojson(
     #     os.path.join("" "data", "GN.sample10.geojson"),
